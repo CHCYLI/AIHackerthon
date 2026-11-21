@@ -1,5 +1,7 @@
 **Final Preview:** [Open the HTML preview](CarbonX%20final%20project.html) - download the file and open it in your browser.
 
+**Intro Video:** [Watch or download the CarbonX introduction](assets/CarbonX_Intro_Video.mp4) (3 min 39 sec; the competition demo limit is 3 minutes).
+
 # Industrial Carbon Twin + Flashpoint
 
 An interactive industrial decarbonization application with a geographic screening map, a 3D steel plant, scenario and financial calculations, and Flashpoint stakeholder-research integration. Engineering calculations use the existing deterministic models; synthetic research does not replace those calculations.
@@ -93,4 +95,4 @@ This local importer performs no Flashpoint call. It validates survey/scenario/ru
 
 ## Submission
 
-Publish the extracted project contents in a public GitHub repository and submit its URL. This README provides local setup instructions and links to the frontend artifact above. Confirm the competition's Section B format separately; add the required primary submission artifact or its link here. An optional demo video must be at most three minutes; add its real URL when available. No video is included in this repository.
+Publish the extracted project contents in a public GitHub repository and submit its URL. This README provides local setup instructions and links to the frontend artifact above. Confirm the competition's Section B format separately; add the required primary submission artifact or its link here. The introduction video is linked above. Its current duration is 3 minutes 39 seconds, exceeding the competition's three-minute optional demo limit; a shorter version is required to satisfy that limit.
