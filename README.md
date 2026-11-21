@@ -27,7 +27,7 @@ npm start
 
 ## Standalone frontend
 
-Download and open `preview.html` directly. This self-contained file includes Home, Map, 3D Plant, and Scenario and Finance views. It works offline without Node or credentials. The Flashpoint Research section displays a saved snapshot with twelve completed records, zero usable answer sets and Analysis blocked. Its action buttons explain how to start the full application; they do not execute requests. Research API loading and imports require the full local application. GitHub's file viewer displays HTML source; download the file or use static hosting to view it. The full Node backend cannot run on GitHub Pages.
+Download and open `CarbonX final project.html` directly. This self-contained file includes Home, Map, 3D Plant, and Scenario and Finance views. It works offline without Node or credentials. The Flashpoint Research section displays a saved snapshot with twelve completed records, zero usable answer sets and Analysis blocked. Its action buttons explain how to start the full application; they do not execute requests. Research API loading and imports require the full local application. GitHub's file viewer displays HTML source; download the file or use static hosting to view it. The full Node backend cannot run on GitHub Pages.
 
 ## How Flashpoint is used
 
@@ -87,7 +87,7 @@ This local importer performs no Flashpoint call. It validates survey/scenario/ru
 - data/: map scores, saved research and required Flashpoint linkage metadata. Keep flashpoint-seed for research loading and request preparation.
 - scripts/: local result-file importer.
 - flashpoint-client/: wallet client source, policy tests, dependency lockfile and empty configuration template.
-- preview.html: self-contained frontend artifact.
+- CarbonX final project.html: self-contained frontend artifact.
 
 ## Submission
 
