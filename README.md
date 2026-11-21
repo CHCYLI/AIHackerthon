@@ -1,4 +1,4 @@
-**Final Preview:** [Open the HTML preview](CarbonX%20final%20project.html) ? download the file and open it in your browser.
+**Final Preview:** [Open the HTML preview](CarbonX%20final%20project.html) - download the file and open it in your browser.
 
 # Industrial Carbon Twin + Flashpoint
 
