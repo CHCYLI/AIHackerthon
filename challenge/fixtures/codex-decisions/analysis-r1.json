@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "label": "TEST DATA",
+  "origin": "CODEX_AUTHORED",
+  "kind": "ANALYSIS",
+  "inputHash": "8aea97aa945fb43d717a0950070e73b97e3ef5ed5ac84fc9d8a57e3bb218dd09",
+  "basisHash": "0c1e29adccecda3ef64a7fc9c7b2cf6e8745d588b2e41cde71527c3e69582f61",
+  "payload": {
+    "findings": [
+      { "claim": "In the four usable TEST DATA financial answers, two misinterpret NPV: one as an annual expense and one as savings. Two distinguish discounted project value from capital cost. This is a simulated coding observation, not a real-user rate.", "support": [{"round":1,"questionId":"finance"},{"round":1,"questionId":"handoff"}] },
+      { "claim": "Three of four TEST DATA carbon answers use avoided emissions or a scenario difference; one treats captured CO2 as avoided and expresses uncertainty.", "support": [{"round":1,"questionId":"carbon"}] },
+      { "claim": "Two of three answered change prompts request an NPV explanation; the third asks for no change. One of four friction answers identifies carbon boundaries instead of money, and one reports no difficulty.", "support": [{"round":1,"questionId":"change"},{"round":1,"questionId":"friction"}] }
+    ],
+    "counterevidence": "Two simulated financial answers are consistent with the model, one record reports no difficulty/no change, and another prioritizes capture versus avoidance. The proposed finance explanation is not unanimously needed.",
+    "unresolved": [
+      { "question": "Would a short sign/time-boundary explanation enable a better handoff, or would carbon definitions remain the more consequential first change? Requests alone cannot resolve that choice.", "support": [{"round":1,"questionId":"finance"},{"round":1,"questionId":"friction"},{"round":1,"questionId":"handoff"}] }
+    ],
+    "limitations": [
+      "All records are deterministic TEST DATA; there are no real participants or population estimates.",
+      "COMPLETE=6, retrieved=8 and usable=4 are different quantities; two duplicate copies, one malformed row and one preview were excluded. The change question has denominator 3, other questions 4.",
+      "Interpretation is Codex's qualitative coding of the validated fixture values, not a deterministic validator's research judgment or proof that a design will work."
+    ]
+  }
+}

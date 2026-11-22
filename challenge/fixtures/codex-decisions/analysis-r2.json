@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "label": "TEST DATA",
+  "origin": "CODEX_AUTHORED",
+  "kind": "ANALYSIS",
+  "inputHash": "da0dd8ba0a9666f63d014b988ce2f3aec745c8e6c13eba6653e93c499f9bdd63",
+  "basisHash": "42e76b531d4dfc3e5b6b3e3f8fdd2b4eca9eb57b1334223ea64f18487531a318",
+  "payload": {
+    "findings": [
+      { "claim": "In TEST DATA Round 2, two of three answers explicitly distinguish discounted project value from annual expense or savings; the third recognizes a negative financial result but leaves the time boundary unstated.", "support": [{"round":2,"questionId":"npv-explanation"}] },
+      { "claim": "Two of three TEST DATA change answers favor retaining an NPV sign/time explanation; one still prefers a carbon definition. These are fixture values, not observed improvement among real users.", "support": [{"round":2,"questionId":"remaining-change"}] }
+    ],
+    "counterevidence": "One fixture answer still prioritizes capture versus avoided CO2. Prompted text comprehension cannot establish unaided UI performance or eliminate the carbon-definition concern.",
+    "unresolved": [
+      { "question": "Would the proposed short explanation improve an actual first-time user's unaided handoff in the real interface? This needs real, consented validation beyond the two-round offline exercise.", "support": [{"round":2,"questionId":"npv-explanation"},{"round":2,"questionId":"remaining-change"}] }
+    ],
+    "limitations": [
+      "All answers and receipts are TEST DATA, with three usable answers per question in this round.",
+      "No participant actually saw a UI change; the prompt supplied a proposed text explanation and can induce learning or agreement.",
+      "The two-round cap is reached; remaining uncertainty must be reported rather than opening a third round."
+    ]
+  }
+}

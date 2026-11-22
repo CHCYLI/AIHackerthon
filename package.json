@@ -5,7 +5,20 @@
   "description": "Industrial Carbon Twin with saved Flashpoint research integration",
   "scripts": {
     "start": "node apps/api/server.cjs",
-    "dev": "node apps/api/server.cjs"
+    "dev": "node apps/api/server.cjs",
+    "test": "node --test tests/challenge-context.test.cjs tests/challenge-state.test.cjs tests/challenge-validate.test.cjs tests/challenge-policy.test.cjs tests/challenge-workflow.test.cjs tests/challenge-live.test.cjs",
+    "test:client": "node --test flashpoint-client/approved-draft.test.mjs flashpoint-client/flashpoint.test.mjs flashpoint-client/panel-status.test.mjs flashpoint-client/wallet-store.test.mjs",
+    "test:all": "node --test tests/challenge-context.test.cjs tests/challenge-state.test.cjs tests/challenge-validate.test.cjs tests/challenge-policy.test.cjs tests/challenge-workflow.test.cjs tests/challenge-live.test.cjs flashpoint-client/approved-draft.test.mjs flashpoint-client/flashpoint.test.mjs flashpoint-client/panel-status.test.mjs flashpoint-client/wallet-store.test.mjs",
+    "challenge:discover": "node scripts/challenge-discover.cjs",
+    "challenge:context": "node scripts/challenge-context.cjs",
+    "test:challenge": "node --test tests/challenge-context.test.cjs",
+    "challenge:state": "node scripts/challenge-state.cjs",
+    "test:state": "node --test tests/challenge-state.test.cjs tests/challenge-validate.test.cjs",
+    "test:policy": "node --test tests/challenge-policy.test.cjs",
+    "challenge:offline": "node scripts/challenge-run.cjs demo",
+    "test:workflow": "node --test tests/challenge-workflow.test.cjs",
+    "challenge:live": "node scripts/challenge-live-run.cjs",
+    "test:live": "node --test tests/challenge-live.test.cjs"
   },
   "engines": {
     "node": ">=22.19.0"

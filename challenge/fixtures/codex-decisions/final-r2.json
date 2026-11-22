@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "label": "TEST DATA",
+  "origin": "CODEX_AUTHORED",
+  "kind": "FINAL",
+  "inputHash": "d311dbd4c53f6f5c8014f413594d36790cbd4cd0ecbd6f5c2ceedc7152dd03c1",
+  "basisHash": "7badb6d413a5a4f369434ff2453defb36eb822b6fc93c528f83eb28d2e4efb6f",
+  "payload": {
+    "recommendation": "SIMULATED DEMONSTRATION ONLY: prioritize one short explanation beside NPV that states its sign, discounted project boundary and million constant 2025 USD units, connected to the environmental/financial trade-off. Round 1 fixtures contain two sign/time misunderstandings among four finance answers; Round 2 fixtures contain two explicit discounted-value interpretations among three answers after a proposed explanation. This demonstrates an evidence-linked decision process, not proof that real CarbonX users need or benefit from this change.",
+    "support": [{"round":1,"questionId":"finance"},{"round":1,"questionId":"handoff"},{"round":1,"questionId":"change"},{"round":2,"questionId":"npv-explanation"},{"round":2,"questionId":"remaining-change"}],
+    "counterevidence": "Two Round 1 fixtures already interpret the finances consistently; one needs no change. A carbon-definition concern persists in both rounds and remains a competing priority.",
+    "limitations": [
+      "Every participant finding, approval and platform receipt is simulated TEST DATA; no real research conclusion, recruitment, email or spending occurred.",
+      "This is Codex's interpretation of deterministic fixture values. Replay of this record is not a fresh LLM decision.",
+      "Prompted Round 2 text and invented test answers establish no causal UI effect, participant representativeness or engineering/financial validity.",
+      "The actual Carbon Twin outputs remain illustrative; physical avoidance differs from finance avoidance, and permanent storage is unknown. No calculation engine was changed."
+    ],
+    "nextCheck": "After separate Phase 6 authorization and verified account, transport and authentic-answer readback, test the short explanation with consenting first-time users and compare unaided trade-off handoffs. Preserve the carbon-boundary counterevidence; do not exceed this run's two-round cap."
+  }
+}

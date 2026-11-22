@@ -1,0 +1,201 @@
+{
+  "provenance": {
+    "source": "codex app-server mcpServerStatus/list",
+    "checkedAt": "2026-11-22T04:41:49.179Z",
+    "serverInfo": {
+      "name": "Flashpoint.AI",
+      "version": "1.30.0",
+      "websiteUrl": "https://flashpoint.ai"
+    },
+    "note": "Input schema snapshot only; authentic response envelopes are NOT verified. Refresh before Phase 6."
+  },
+  "toolSchemas": {
+    "tool_survey": {
+      "properties": {
+        "brief": {
+          "title": "Brief",
+          "type": "string"
+        },
+        "survey_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Survey Id"
+        },
+        "conversation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conversation Id"
+        }
+      },
+      "required": [
+        "brief"
+      ],
+      "title": "tool_surveyArguments",
+      "type": "object"
+    },
+    "panel": {
+      "properties": {
+        "action": {
+          "title": "Action",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "num_respondents": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Num Respondents"
+        },
+        "research_objective": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Research Objective"
+        },
+        "context": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context"
+        },
+        "audience": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Audience"
+        },
+        "survey_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Survey Id"
+        },
+        "panel_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Panel Id"
+        },
+        "provider": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Provider"
+        },
+        "request": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request"
+        },
+        "conversation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conversation Id"
+        },
+        "job_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Job Id"
+        }
+      },
+      "required": [
+        "action"
+      ],
+      "title": "panelArguments",
+      "type": "object"
+    }
+  },
+  "toolDescriptions": {
+    "tool_survey": "Run the Flashpoint surveys agent — the single entry point for\n        ANYTHING survey-related.\n\n        Hand it a natural-language brief and it runs its own multi-turn\n        loop (planning + ~150 internal tools) to take the next steps\n        itself. You do NOT chain individual operations, and you do NOT\n        route survey work to `chat()` — this one tool owns the full\n        lifecycle:\n          • Plan & research: clarify the objective, research the market /\n            audience / competitors, propose a blueprint before building;\n            start from a template or save a survey as one.\n          • Design: author / edit questions in 20+ types (single, multi,\n            grids, ranking, MaxDiff, conjoint / CBC, image compare,\n            spatial allocation, thermometer, sliders, open ends, contact\n            form, AI-moderated interview); blocks + rotation /\n            randomisation, answer lists, skip & display logic, piping,\n            loops, URL variables, redirect URLs, derived values,\n            exclusive options, data validation.\n          • Quotas & sample sources: quota cells, least-fill, quota\n            sheets, progress / reconcile / export; BYO sample sources\n            (per-vendor links + redirects), first-party and custom panels.\n          • Languages: add survey languages, machine-translate, review or\n            set individual translations.\n          • Validation & QA: surveycheck (logic prover), publish readiness,\n            DSL validation, QA rounds with findings, walk a respondent\n            path, field report, client review link.\n          • Launch & lifecycle: publish, pause, resume, complete, clone,\n            transfer; version history, compare, restore, undo.\n          • PAID recruitment (Prolific / Dynata / Cint): browse filters\n            and markets, get a price quote, then on your confirmation get\n            a secure checkout link. Just ask — e.g. \"recruit 5 Prolific\n            respondents for this survey, quote first\". NOTHING is charged\n            without an explicit confirm step (see the confirm pattern\n            below). Panel status / pause / resume after launch.\n          • Distribution: email lists + templates, invitations, reminders,\n            send to a panel, send reports.\n          • Data quality: speeders, straightliners, quality summary,\n            exclude responses, generate test data.\n          • Analysis & exports: frequencies, crosstabs with stat tests,\n            NPS, open-end themes, AI summaries / key takeaways; conjoint\n            analytics (market simulator, willingness-to-pay, sensitivity,\n            segments, product optimizer, share link); CSV / XLSX / DOCX /\n            PDF exports; results dashboard.\n          • Collaboration: comments on questions, resolve threads.\n\n        Interactive cards (plan, approval, results dashboard, conjoint\n        simulator, checkout) render in the Flashpoint web app, not here —\n        the text reply carries the substance, and every MCP conversation\n        is also visible at app.flashpoint.ai afterwards.\n\n        ALWAYS thread `conversation_id` across related calls (build →\n        recruit → analyze) so the agent keeps full context of the survey\n        it just worked on — pass the value returned by the previous call.\n\n        Confirm pattern (money / destructive actions): the agent will NOT\n        perform a consequential action on the first ask. It replies asking\n        you to confirm; relay that to the user, then call again on the SAME\n        `conversation_id` with their confirmation (e.g. \"confirm\") to\n        proceed. This is how approval works on the direct path — there is\n        no UI card to click.\n\n        Args:\n            brief: What you want done, in natural language — a build spec,\n                an edit, a recruitment request, an analysis ask, an export,\n                a confirmation, etc.\n            survey_id: Pass to act on an existing survey; omit to create a\n                new one.\n            conversation_id: Pass the value returned by a previous call to\n                continue the same thread (REQUIRED to keep context across\n                build → recruit → analyze and to satisfy a confirm step).\n                Omit on the very first call and the server mints one\n                (uuid7).\n\n        The agent may take 60–600s. Returns the worker's result blob\n        (typically includes the relevant `survey_id`) with the\n        `conversation_id` echoed back so follow-up calls thread.\n        ",
+    "panel": "Manage respondent SAMPLES — synthetic personas and paid recruits.\n\n        Pick `action`:\n\n        • action=\"create\" — build a synthetic panel (AI-generated personas).\n          Required: name, num_respondents, research_objective.\n          Optional:  context (e.g. real distributions from `demographics`),\n                     audience.\n          The panel is saved to your team's library; the returned panel_id\n          works with action=\"run\", chat(), and the Flashpoint app.\n\n        • action=\"run\" — run an existing synthetic panel from your team's\n          library through a survey.\n          Required: panel_id (from action=\"create\", list_my_panels, or the\n                    app), survey_id.\n          Returns a job_id immediately — runs take minutes to tens of\n          minutes. Poll with action=\"status\".\n\n        • action=\"create_and_run\" — convenience: build a fresh synth panel\n          and run it through a survey. Same job_id + status flow as \"run\".\n          Required: name, num_respondents, research_objective, survey_id.\n\n        • action=\"status\" — progress of a run / create_and_run job.\n          Required: job_id. Returns status (\"running\" | \"completed\" |\n          \"failed\" | \"interrupted\"), stage, progress (0–1 within the\n          stage), message, and when finished the result or error.\n          Poll about once a minute; don't wait on a single call.\n\n        • action=\"recruit\" — real PAID respondents from Prolific / Dynata.\n          Required: survey_id (price quote is per-survey) OR `request`\n                    (free-text catalog browse, e.g. \"what Prolific filters\n                    are available?\").\n          Optional: provider, num_respondents, audience.\n          Delegates to the surveys agent's quote → confirm → checkout flow.\n          NOTHING is charged without an explicit confirm step on a follow-up\n          call threaded by conversation_id.\n\n        Routing is by action only — no overloading on which args are set.\n        Worker queue names are unchanged (create_panel,\n        synthetic_panel_take_survey, delegate_to_surveys).\n        "
+  }
+}

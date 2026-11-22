@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "label": "TEST DATA",
+  "origin": "CODEX_AUTHORED",
+  "kind": "FOLLOWUP",
+  "inputHash": "e8883fd9a6f6878dd8b84fa948a08d8bbc1378e27d48932802c744524954cda3",
+  "basisHash": "6f7fc7a7f795e02ed74d373e83a410656c406306243adaf9595fa649b7edc5a0",
+  "payload": {
+    "decision": "CREATE_FOLLOWUP",
+    "reasoningSummary": "Two of four usable fixture finance answers confuse NPV sign or time boundary, while one carbon answer confuses capture and avoidance and one record needs no change. A focused text-explanation follow-up could change the first-improvement priority. This is a simulated judgment; no real Round 2 is authorized.",
+    "support": [{"round":1,"questionId":"finance"},{"round":1,"questionId":"carbon"},{"round":1,"questionId":"friction"}],
+    "plan": {
+      "interpretation": "Resolve the observed simulated finance-explanation obstacle before selecting one first improvement, while preserving the competing carbon-definition concern. This follow-up plan was written after inspecting validated Round 1 values.",
+      "participants": "Continue only the labeled offline fixture demonstration. A future real follow-up would require suitable consenting participants, fresh distribution approval and clear reporting of repeat exposure/learning effects.",
+      "uncertainties": [
+        { "id": "npv-clarity", "rationale": "Two fixture explanations confuse annual expense or savings with negative discounted project value." },
+        { "id": "remaining-priority", "rationale": "A carbon-boundary concern and a no-change response compete with the proposed finance explanation." }
+      ],
+      "questions": [
+        { "id": "npv-explanation", "type": "text", "uncertaintyIds": ["npv-clarity"], "prompt": "Consider this proposed explanation, not a tested UI: 'The illustrative model's NPV is -134.6 million constant 2025 USD: discounted net cash flow over the modeled period. A negative value means discounted costs exceed benefits under these assumptions; it is not an annual expense or a saving.' How would you explain the financial trade-off now, and what remains unclear?", "rationale": "Probe the specific sign/time-boundary misunderstandings observed in two Round 1 fixture answers. If the explanation remains unusable, a different first change may be needed. Prompted comprehension cannot prove UI effectiveness.", "support": [{"round":1,"questionId":"finance"},{"round":1,"questionId":"handoff"}] },
+        { "id": "remaining-change", "type": "text", "uncertaintyIds": ["remaining-priority"], "prompt": "After that explanation, what one change, if any, would most help you explain the overall results, and why? Another change or no change is acceptable.", "rationale": "Allow the observed carbon-boundary concern and no-change view to challenge an NPV-first choice rather than force agreement.", "support": [{"round":1,"questionId":"carbon"},{"round":1,"questionId":"friction"},{"round":1,"questionId":"change"}] }
+      ],
+      "analysisCriteria": "Validate actual fixture answers for this new round. Assess whether each explanation distinguishes discounted project value from annual expense/savings; preserve residual carbon concerns and disagreement. Compare only within this simulated exercise and report prompting/learning limits. Stop at two rounds."
+    }
+  }
+}

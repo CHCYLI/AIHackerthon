@@ -1,0 +1,411 @@
+{
+  "schemaVersion": 1,
+  "mode": "OFFLINE_PLANNING",
+  "authoredBy": "Codex, applying challenge/agent.md to this objective and actual model context",
+  "reusePolicy": "One-off planning example, not a fixed question bank, generator or runtime policy input.",
+  "objective": "Find the one change CarbonX should make first so a first-time user can understand our steel plant results and explain the trade-off to someone else.",
+  "interpretation": {
+    "decision": "Choose one first product improvement to the explanation of the current steel-plant scenario results.",
+    "successObservation": "A first-time user can describe the displayed result and its environmental/financial trade-off in their own words, with an appropriate illustrative-model caveat.",
+    "scope": "Product comprehension and communication; no engineering validation, investment advice or population inference.",
+    "conclusionStatus": "No participant evidence exists; no winning improvement has been selected."
+  },
+  "context": {
+    "schemaVersion": "1",
+    "source": "carbon-twin-model",
+    "dataQuality": "illustrative",
+    "scenarios": [
+      {
+        "schemaVersion": "1",
+        "source": "carbon-twin-model",
+        "dataQuality": "illustrative",
+        "scenarioId": "651f24ce7dff89474c7bec49",
+        "scenarioName": "Baseline (current Scenario model defaults)",
+        "modelVersion": "original-ccus-4f14b05433a1",
+        "inputHash": "874377155923fa6621b590ad516bccafee8c1869eeaa07ebb4a013cd289661f0",
+        "year": 2050,
+        "provenance": {
+          "calculator": "apps/api/research.cjs#brief",
+          "engineSource": "apps/web/scenario.html (first two inline model scripts)",
+          "inputSource": "apps/api/research.cjs#defaults"
+        },
+        "assumptions": {
+          "params": {
+            "re": 20,
+            "ef": 0.42,
+            "eff": 0,
+            "ccs": false,
+            "cap": 90,
+            "pen": 0.3,
+            "perm": 99,
+            "cp": 75,
+            "el": 0,
+            "sub": 0,
+            "yr": 2030,
+            "so": 8,
+            "wi": 7,
+            "ot": 5,
+            "ed": 1000,
+            "dur": 10
+          },
+          "finance": {
+            "discount": 8,
+            "captureCapex": 450,
+            "transportCapex": 85,
+            "storageCapex": 110,
+            "efficiencyCapex": 8,
+            "electrifyCapex": 3,
+            "renewCapex": 1.5,
+            "utilCapex": 180,
+            "captureOpex": 35,
+            "transportOpex": 13,
+            "storageOpex": 18,
+            "utilOpex": 12,
+            "mrvOpex": 5,
+            "powerPrice": 0.07,
+            "renewPremium": 0.01,
+            "effSavings": 3,
+            "fuelSavings": 0.4,
+            "transportLoss": 0.5,
+            "utilShare": 0,
+            "utilPrice": 30,
+            "storageFee": 0,
+            "policyEligible": 100,
+            "uncertainty": 20
+          },
+          "year": 2050
+        },
+        "units": {
+          "carbon": "Mt CO2/year",
+          "money": "million constant 2025 USD",
+          "annualMoney": "million constant 2025 USD/year",
+          "irrPercent": "percent (existing model display precision)",
+          "irrDisplay": "existing model percent text or null",
+          "paybackYear": "calendar year or null"
+        },
+        "metrics": {
+          "baselineNetMtCO2PerYear": 2.3160000000000003,
+          "netMtCO2PerYear": 2.3160000000000003,
+          "avoidedMtCO2PerYear": 0,
+          "financeAvoidedMtCO2PerYear": 0,
+          "capturedMtCO2PerYear": 0,
+          "grossInjectedMtCO2PerYear": 0,
+          "utilizedMtCO2PerYear": 0,
+          "transportLossMtCO2PerYear": 0,
+          "physicalRetainedProxyMtCO2PerYear": 0,
+          "permanentStoredMtCO2PerYear": null,
+          "capexMillionUsd": 0,
+          "netDesignCapexMillionUsd": 0,
+          "opexMillionUsdPerYear": 0,
+          "npvMillionUsd": 0,
+          "irrPercent": null,
+          "irrDisplay": null,
+          "paybackYear": null
+        },
+        "limitations": [
+          "All engineering inputs and financial coefficients are illustrative assumptions, not measured facility data or validated investment forecasts.",
+          "Gross injection is not proof of permanent storage. The original physical retention proxy and financial routing are separate simplified boundaries; permanent storage after transport and utilization is not established.",
+          "Utilized CO2 is not permanent sequestration. The original avoided-emissions ledger has a utilization limitation; this integration preserves rather than changes that model.",
+          "Carbon-price and subsidy values are hypothetical assumptions, not guaranteed revenue or proof of tax-credit eligibility.",
+          "Illustrative cash flows. Capture/transport/storage costs, energy-upgrade investments, policy-value eligibility and distributions are user assumptions; missing facility, market and legal evidence. Carbon-price value is hypothetical, not a 45Q entitlement. No financing, tax, inflation, environmental externalities or EOR oil emissions modeled.",
+          "Synthetic stakeholder opinions are exploratory AI output, not evidence of actual market demand or representative industry preferences.",
+          "This context uses the active Scenario page model. The shared /api/v1/scenarios/run model has a different carbon-chain boundary and must not be substituted without identifying its provenance.",
+          "IRR percent is parsed from the existing model display and retains its rounding. Undefined or ambiguous IRR remains null; the original display is preserved."
+        ]
+      },
+      {
+        "schemaVersion": "1",
+        "source": "carbon-twin-model",
+        "dataQuality": "illustrative",
+        "scenarioId": "48d24c8d3aaac2cd4846ff6e",
+        "scenarioName": "Combined CCUS demonstration",
+        "modelVersion": "original-ccus-4f14b05433a1",
+        "inputHash": "7b6e07a30c5f1a2f091d5fbbca50ef158439e6427a8c601a84498304fb426c3f",
+        "year": 2050,
+        "provenance": {
+          "calculator": "apps/api/research.cjs#brief",
+          "engineSource": "apps/web/scenario.html (first two inline model scripts)",
+          "inputSource": "data/flashpoint-seed/scenario-brief.json#inputs"
+        },
+        "assumptions": {
+          "params": {
+            "re": 80,
+            "ef": 0.42,
+            "eff": 15,
+            "ccs": true,
+            "cap": 90,
+            "pen": 0.3,
+            "perm": 99,
+            "cp": 75,
+            "el": 0,
+            "sub": 0,
+            "yr": 2030,
+            "so": 32,
+            "wi": 28,
+            "ot": 20,
+            "ed": 1000,
+            "dur": 10
+          },
+          "finance": {
+            "discount": 8,
+            "captureCapex": 450,
+            "transportCapex": 85,
+            "storageCapex": 110,
+            "efficiencyCapex": 8,
+            "electrifyCapex": 3,
+            "renewCapex": 1.5,
+            "utilCapex": 180,
+            "captureOpex": 35,
+            "transportOpex": 13,
+            "storageOpex": 18,
+            "utilOpex": 12,
+            "mrvOpex": 5,
+            "powerPrice": 0.07,
+            "renewPremium": 0.01,
+            "effSavings": 3,
+            "fuelSavings": 0.4,
+            "transportLoss": 0.5,
+            "utilShare": 0,
+            "utilPrice": 30,
+            "storageFee": 0,
+            "policyEligible": 100,
+            "uncertainty": 20
+          },
+          "year": 2050
+        },
+        "units": {
+          "carbon": "Mt CO2/year",
+          "money": "million constant 2025 USD",
+          "annualMoney": "million constant 2025 USD/year",
+          "irrPercent": "percent (existing model display precision)",
+          "irrDisplay": "existing model percent text or null",
+          "paybackYear": "calendar year or null"
+        },
+        "metrics": {
+          "baselineNetMtCO2PerYear": 2.3160000000000003,
+          "netMtCO2PerYear": 0.996109968,
+          "avoidedMtCO2PerYear": 1.3198900320000004,
+          "financeAvoidedMtCO2PerYear": 1.3153445820000005,
+          "capturedMtCO2PerYear": 0.9090900000000001,
+          "grossInjectedMtCO2PerYear": 0.9045445500000001,
+          "utilizedMtCO2PerYear": 0,
+          "transportLossMtCO2PerYear": 0.00454545,
+          "physicalRetainedProxyMtCO2PerYear": 0.8999991,
+          "permanentStoredMtCO2PerYear": null,
+          "capexMillionUsd": 796.36305,
+          "netDesignCapexMillionUsd": 796.36305,
+          "opexMillionUsdPerYear": 90.20900580000001,
+          "npvMillionUsd": -134.6275490285887,
+          "irrPercent": 0.5,
+          "irrDisplay": "0.5%",
+          "paybackYear": 2050
+        },
+        "limitations": [
+          "All engineering inputs and financial coefficients are illustrative assumptions, not measured facility data or validated investment forecasts.",
+          "Gross injection is not proof of permanent storage. The original physical retention proxy and financial routing are separate simplified boundaries; permanent storage after transport and utilization is not established.",
+          "Utilized CO2 is not permanent sequestration. The original avoided-emissions ledger has a utilization limitation; this integration preserves rather than changes that model.",
+          "Carbon-price and subsidy values are hypothetical assumptions, not guaranteed revenue or proof of tax-credit eligibility.",
+          "Illustrative cash flows. Capture/transport/storage costs, energy-upgrade investments, policy-value eligibility and distributions are user assumptions; missing facility, market and legal evidence. Carbon-price value is hypothetical, not a 45Q entitlement. No financing, tax, inflation, environmental externalities or EOR oil emissions modeled.",
+          "Synthetic stakeholder opinions are exploratory AI output, not evidence of actual market demand or representative industry preferences.",
+          "This context uses the active Scenario page model. The shared /api/v1/scenarios/run model has a different carbon-chain boundary and must not be substituted without identifying its provenance.",
+          "IRR percent is parsed from the existing model display and retains its rounding. Undefined or ambiguous IRR remains null; the original display is preserved."
+        ]
+      }
+    ]
+  },
+  "knowledgeBoundaries": {
+    "assumptions": "Inputs and participant suitability are assumptions, not observations of a real facility or recruited sample.",
+    "modelOutputs": "Recalculated Scenario-page outputs below are illustrative, identified by provenance, version, hash, year and units.",
+    "participantOpinions": null,
+    "verifiedEvidence": "Only local model calculation/provenance and this planning execution are verified in Phase 4; no survey findings.",
+    "distinctions": [
+      "Physical avoidance differs from finance-adjusted avoidance.",
+      "Captured, gross injected and physically retained proxy CO2 are distinct; permanent storage is null.",
+      "CAPEX and NPV use million constant 2025 USD; annual OPEX has an annual boundary.",
+      "The active Scenario model is not the shared API/3D model."
+    ]
+  },
+  "uncertainties": [
+    {
+      "id": "U_HANDOFF",
+      "rank": 1,
+      "question": "Can a first-time user explain the environmental/financial trade-off without coaching?",
+      "whyItMatters": "This directly tests the objective and could expose a gap that an explanation change should address.",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "U_CARBON",
+      "rank": 2,
+      "question": "Which carbon quantities and boundaries are understood or confused?",
+      "whyItMatters": "The model distinguishes physical avoidance, financial avoidance, capture and injection; confusion could change the meaning communicated.",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "U_FINANCE",
+      "rank": 3,
+      "question": "Can users interpret the costs, returns, units and time boundaries?",
+      "whyItMatters": "Combined has positive modeled avoidance and negative modeled NPV; whether users understand this is unknown.",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "U_GOAL",
+      "rank": 4,
+      "question": "What decision do first-time users believe the result page supports?",
+      "whyItMatters": "An incorrect mental model may affect interpretation before metric details matter.",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "U_PRIORITY",
+      "rank": 5,
+      "question": "Which observed obstacle is most consequential and actionable as one first improvement?",
+      "whyItMatters": "Preferences alone are insufficient; compare requested changes with actual explanation difficulties.",
+      "status": "UNTESTED"
+    }
+  ],
+  "participants": {
+    "proposedSourceType": "real_first_party",
+    "approach": "Small exploratory comprehension study with consenting first-time users, followed by scoped qualitative coding.",
+    "proposedTargetRange": [
+      3,
+      5
+    ],
+    "targetIsNotRecruitedCount": true,
+    "eligibility": "Explicitly consenting adults unfamiliar with CarbonX; record relevant domain familiarity without unnecessary personal data.",
+    "expertiseBoundary": "Appropriate for usability and communication; not a substitute for steel, storage or finance experts.",
+    "limitations": "A small convenience sample is directional, not representative; actual composition and nonresponse must be reported.",
+    "consentVerified": false,
+    "recipientListVerified": false,
+    "recruitedCount": null
+  },
+  "exposure": {
+    "stimulus": "The existing CarbonX Scenario view, showing Baseline and Combined at 2050 using the context snapshot inputs.",
+    "verificationRequiredBeforeFielding": "Confirm the actual UI can reproduce both contexts and privately save its exact version/screens; no new comparison UI is claimed.",
+    "instructions": "View the existing scenario results as a first-time user. The values are illustrative model outputs. Explain what you understand; uncertainty, no difficulty and no suggested change are acceptable. Do not share personal or confidential information.",
+    "sequence": "Unaided purpose and handoff first, then carbon/financial probes, friction and one-change suggestion. Do not show a model-answer rubric before the unaided tasks.",
+    "status": "PROPOSED_NOT_FIELDED"
+  },
+  "round1": {
+    "status": "AGENT_AUTHORED_PROPOSAL",
+    "providerQuestionIds": null,
+    "questions": [
+      {
+        "planningId": "purpose",
+        "type": "text",
+        "uncertaintyIds": [
+          "U_GOAL"
+        ],
+        "prompt": "In your own words, what does this results page help you understand or decide? It is fine if you are unsure.",
+        "rationale": "Elicit the initial mental model before naming metrics or suggesting a design fix.",
+        "decisionUse": "Distinguish purpose/framing problems from difficulty with individual figures."
+      },
+      {
+        "planningId": "handoff",
+        "type": "text",
+        "uncertaintyIds": [
+          "U_HANDOFF"
+        ],
+        "prompt": "Imagine explaining these results to someone who has not seen the page. What would you tell them in two or three sentences? Include any trade-off or uncertainty you noticed; if none is clear, say so.",
+        "rationale": "Observe communication of the trade-off directly rather than infer it from a confidence rating.",
+        "decisionUse": "Compare actual explanations with model-supported meanings, recording correct interpretations and omissions separately."
+      },
+      {
+        "planningId": "carbon-meaning",
+        "type": "text",
+        "uncertaintyIds": [
+          "U_CARBON"
+        ],
+        "prompt": "Which carbon result would you use to describe the difference between the scenarios, and what do you think that result means? You may say that you cannot tell.",
+        "rationale": "Probe metric selection and boundary comprehension after the unaided tasks without asserting which term caused a problem.",
+        "decisionUse": "Assess whether labeling, definitions or comparison context could address an observed misunderstanding."
+      },
+      {
+        "planningId": "financial-meaning",
+        "type": "text",
+        "uncertaintyIds": [
+          "U_FINANCE"
+        ],
+        "prompt": "What do the financial results tell you about the scenarios? Explain the figures as you understand them, including any units or time periods you can identify. You may say that you cannot tell.",
+        "rationale": "Check interpretation of costs and returns without instructing participants which financial conclusion to repeat.",
+        "decisionUse": "Separate unit/time-boundary difficulty from misunderstanding of cost versus return."
+      },
+      {
+        "planningId": "friction",
+        "type": "text",
+        "uncertaintyIds": [
+          "U_PRIORITY",
+          "U_HANDOFF"
+        ],
+        "prompt": "What, if anything, was hardest to understand or explain, and where on the page did that difficulty arise? No difficulty is a valid answer.",
+        "rationale": "Locate a specific obstacle and compare it with the participant explanation instead of assuming a UI defect.",
+        "decisionUse": "Connect a possible change to an observable comprehension problem."
+      },
+      {
+        "planningId": "first-change",
+        "type": "text",
+        "uncertaintyIds": [
+          "U_PRIORITY"
+        ],
+        "prompt": "If you could change one thing on this page to make explaining the results easier, what would you change and why? No change is a valid answer.",
+        "rationale": "Collect a participant suggestion without imposing a preselected solution.",
+        "decisionUse": "Consider suggestions alongside comprehension evidence and contrary answers, not as a vote proving effectiveness."
+      }
+    ]
+  },
+  "analysisPlan": {
+    "status": "PROPOSED_NOT_EXECUTED",
+    "basis": "Validate actual same-run question-level answers before qualitative coding. Keep question denominators and record references; preserve dissent and unanswered items.",
+    "codingCriteria": [
+      "Purpose understood, partly understood or unclear, with the actual answer reference.",
+      "Environmental quantity/boundary interpreted consistently with context, partly, incorrectly or not assessable.",
+      "Financial interpretation distinguishes cost/return and stated units/time boundaries, partly, incorrectly or not assessable.",
+      "Handoff communicates a model-supported trade-off and caveat, partly, incorrectly or not assessable.",
+      "Specific friction and proposed change traced to actual answers; contradictory/no-difficulty answers retained."
+    ],
+    "choiceRule": "Prioritize one actionable change that addresses the most consequential observed misunderstanding across the available explanations; compare counterevidence and acknowledge uncertainty. Do not infer effectiveness from requests alone.",
+    "noEvidenceRule": "Block substantive analysis and recommendation; report exact missing answers instead.",
+    "aggregateLimit": "Selection-only distributions cannot establish findings for this all-text instrument."
+  },
+  "round2": {
+    "status": "NOT_DESIGNED_AWAITING_REAL_ROUND_1_EVIDENCE",
+    "questions": null,
+    "observedEvidenceRefs": [],
+    "requiredBeforeDesign": [
+      "Actual correctly scoped first-party Round 1 answers with positive valid question denominators and preserved raw-source provenance.",
+      "Validated Round 1 questionEvidenceRefs and an analysis identifying a consequential unresolved or conflicting observation.",
+      "A rationale that a feasible follow-up with suitable consenting participants could change the first-improvement decision.",
+      "Each new question cites the exact Round 1 question evidence it addresses; actual action approvals and transport are checked separately."
+    ],
+    "stopRule": "Record STOP when evidence supports a bounded decision or another round would not materially help; never exceed two rounds.",
+    "missingEvidenceRule": "Wait/block and report the missing evidence; do not invent follow-up questions or findings."
+  },
+  "execution": {
+    "localStateSourceType": "test_fixture",
+    "intendedLiveSourceType": "real_first_party",
+    "maxRounds": 2,
+    "maxSpendingUsd": null,
+    "remoteOperations": [],
+    "externalActionsAuthorized": false,
+    "surveyId": null,
+    "conversationId": null,
+    "panelId": null,
+    "remoteRunId": null,
+    "invitedCount": null,
+    "completedRecords": null,
+    "retrievedAnswerRecords": null,
+    "usableAnswerRecords": null,
+    "responseEvidence": null,
+    "findings": [],
+    "recommendation": null,
+    "approvalsRequiredLater": [
+      "Exact draft-creation request and any specific charge ceiling, with supported guarded transport.",
+      "Exact publication request after reviewing the actual draft.",
+      "Exact consented/opt-out-filtered recipient list fingerprint, count and send request; separate approval for any reminder.",
+      "Separate specific authorization for any paid/x402 operation, recruitment or synthetic action; none are authorized by this plan."
+    ],
+    "prerequisites": [
+      "Confirm current authentication/account/team and survey ownership without exposing secrets.",
+      "Complete later-phase state/transport orchestration and authentic response-output mapping.",
+      "Verify actual UI exposure, participant eligibility, consent and recipients before fielding."
+    ]
+  }
+}

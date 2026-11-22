@@ -1,0 +1,27 @@
+{
+  "label": "TEST DATA",
+  "purpose": "Deterministic local answer fixtures, authored for orchestration tests. No real or paid participants.",
+  "rounds": {
+    "1": {
+      "completedRecords": 6,
+      "records": [
+        { "id": "TEST-A", "answers": { "handoff": "Less CO2, but I cannot explain the money number.", "carbon": "About 1.32 Mt less CO2 per year than baseline.", "finance": "I think negative 134 million is an annual expense. I cannot tell.", "friction": "The NPV sign and time period are unclear.", "change": "Add a short explanation of what NPV means." } },
+        { "id": "TEST-B", "answers": { "handoff": "CO2 is lower and the project saves 134 million dollars.", "carbon": "The difference is about 1.32 Mt CO2 in a year.", "finance": "Negative NPV means 134 million in savings, I think.", "friction": "Does a minus sign mean savings or a loss?", "change": "Explain the negative sign beside NPV." } },
+        { "id": "TEST-C", "answers": { "handoff": "Capture reduces the footprint, and the discounted financial return looks negative.", "carbon": "I would use captured CO2 as the amount avoided; I am unsure why there are two numbers.", "finance": "CAPEX is the initial investment; NPV is discounted net cash flow over the project, both in million 2025 USD.", "friction": "Captured versus avoided is confusing." } },
+        { "id": "TEST-D", "answers": { "handoff": "The model shows about 1.32 Mt less CO2 per year, at a negative modeled NPV. These are illustrative assumptions.", "carbon": "Avoided CO2 is the baseline minus scenario emissions, not just capture.", "finance": "The model has 796 million in capital cost and negative 134.6 million discounted value; this is not an annual cost.", "friction": "No difficulty.", "change": "No change needed for me." } },
+        { "id": "TEST-duplicate", "answers": { "finance": "Duplicate row must not count." } },
+        { "id": "TEST-duplicate", "answers": { "finance": "Duplicate row must not count." } },
+        null,
+        { "id": "TEST-preview", "preview": true, "answers": { "finance": "Preview must not count." } }
+      ]
+    },
+    "2": {
+      "completedRecords": 3,
+      "records": [
+        { "id": "TEST-R2-A", "answers": { "npv-explanation": "It is a discounted net value over the model period, not an annual expense. A negative result means costs outweigh discounted benefits under these assumptions.", "remaining-change": "Keep the time-period explanation next to NPV." } },
+        { "id": "TEST-R2-B", "answers": { "npv-explanation": "Negative does not mean savings here. It is the model's discounted net cash flow, and the assumptions could change it.", "remaining-change": "A short sentence about the sign would help me explain the trade-off." } },
+        { "id": "TEST-R2-C", "answers": { "npv-explanation": "I understand the negative financial result, but I still cannot explain capture versus avoided emissions.", "remaining-change": "I would prefer a carbon definition first." } }
+      ]
+    }
+  }
+}

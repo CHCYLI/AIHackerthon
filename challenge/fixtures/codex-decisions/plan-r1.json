@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "label": "TEST DATA",
+  "origin": "CODEX_AUTHORED",
+  "kind": "PLAN",
+  "inputHash": "a97f8720e1a36d4c0dc461ee17d1d1c0b208d7f95a3a19d1591a49bf01dbf438",
+  "basisHash": "b3fd9f7f8cfce049ef59a4259f20e48d5349fd4a5e9e8be23cc74dcf0c7a6dbc",
+  "payload": {
+    "interpretation": "Choose one first explanation improvement that helps a new user communicate the modeled environmental/financial trade-off. Start with an unaided handoff, then probe metric meaning and observed friction; do not choose a winning UI change before answers.",
+    "participants": "For a future real study, consenting first-time CarbonX users can inform comprehension, not certify steel engineering or investment returns. This offline run uses only labeled deterministic fixtures and TEST recipient IDs; no real participant or consent is claimed.",
+    "uncertainties": [
+      { "id": "handoff", "rationale": "Directly observe whether users can convey a trade-off, rather than substitute a self-reported confidence score." },
+      { "id": "carbon", "rationale": "Physical avoidance, finance avoidance, capture and injection have distinct meanings in the loaded model." },
+      { "id": "finance", "rationale": "Positive annual avoidance and negative discounted NPV coexist; units and sign may affect the explanation, but confusion is not yet observed." },
+      { "id": "priority", "rationale": "A first change should address an observed obstacle; suggestions alone do not establish effectiveness." }
+    ],
+    "questions": [
+      { "id": "handoff", "type": "text", "uncertaintyIds": ["handoff"], "prompt": "After viewing the current Baseline and Combined results, what would you tell someone who has not seen them in two or three sentences? Include any trade-off or uncertainty you noticed. It is fine if none is clear.", "rationale": "Observe unaided communication before naming individual metrics or preferred improvements." },
+      { "id": "carbon", "type": "text", "uncertaintyIds": ["carbon"], "prompt": "Which carbon result would you use to describe the difference between the scenarios, and what do you think it means? You may say you cannot tell.", "rationale": "Distinguish metric selection and boundary interpretation without feeding a correct answer." },
+      { "id": "finance", "type": "text", "uncertaintyIds": ["finance"], "prompt": "What do the financial results tell you about the scenarios? Describe the figures, units and time periods as you understand them, or say what you cannot tell.", "rationale": "Probe cost versus return, annual versus project scope and the meaning of the displayed sign." },
+      { "id": "friction", "type": "text", "uncertaintyIds": ["priority", "handoff"], "prompt": "What, if anything, was hardest to explain, and where on the page did that difficulty arise? No difficulty is a valid answer.", "rationale": "Locate a concrete obstacle to compare with the actual handoff." },
+      { "id": "change", "type": "text", "uncertaintyIds": ["priority"], "prompt": "If you would change one thing to make the results easier to explain, what would it be and why? No change is a valid answer.", "rationale": "Collect suggestions while allowing dissent; do not equate requested changes with demonstrated impact." }
+    ],
+    "analysisCriteria": "Validate scoped question-level answers first. Code handoff and carbon/finance explanations against the loaded illustrative model, distinguishing consistent, partial, inconsistent and not assessable interpretations. Keep per-question denominators, unanswered items, uncertainty and contrary observations. Model reference answers must not precede unaided tasks. Verify exact current UI exposure before any future fielding. Decide follow-up only after observing valid Round 1 evidence."
+  }
+}
