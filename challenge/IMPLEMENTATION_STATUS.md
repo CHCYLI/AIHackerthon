@@ -15,7 +15,7 @@ Repository: `AIHackerthon-submit`, branch `main`, base commit `3bbbafc`.
 | 5: End-to-end offline integration | DONE | Executable Codex decision checkpoints, guarded async adapter boundary, deterministic TEST DATA simulator, evidence-dependent two-round replay and report generation. 27 new integration tests pass; no live work. |
 | 6: Live MCP adapter and first-party evidence | DONE — TECHNICAL INTEGRATION ONLY | Actual COMPLETE/retrieved/usable counts 1/1/1; all five question denominators 1, no rejected records. Active v1/revision17. Developer participant with assisted wording; no independent product finding. Fresh Codex analysis chose STOP. |
 | 7-8 | SKIPPED BY USER | Explicit decision to stop further surveys and skip these phases; no new UI or research actions. |
-| 9: Public repository and submission | FINAL CHECKS PASSED — PREPARING PUSH | README, explainer, trigger/runbook and submission checklist ready. Final npm run test:all: 133 passed; valid/empty/pending demos passed. Current/index and sanitized publication-history audit completed before push; original local history retained. |
+| 9: Public repository and submission | DONE — PUBLIC REPOSITORY PUSHED | README/explainer/trigger/runbook/checklist published to CHCYLI/CarbonX-Final-Project main. Final tests133/0 and all three offline demos passed. Audited working/index115 files and all8 publication commits with zero credential/known-private-data findings. Original local history retained; exact-lease history cleanup pushed successfully. Competition form submission remains the operator's action. |
 
 ## Phase 1 implementation
 
@@ -1260,3 +1260,17 @@ replacement. One old signature cannot be retained after rewriting metadata.
 Previously public caches/clones cannot be revoked by a branch update. See
 [security audit](../docs/SECURITY_AUDIT.md). Final commit/push results are recorded
 after remote verification; no further research or UI work is included.
+
+### Publication result
+
+The audited submission commit `da0d89a` was successfully pushed to the public
+repository's main branch with an exact expected-head force-with-lease. Original
+local main was preserved. Final audit covered115 working/index files and8 commits
+in the submission ancestry: zero credential/known-private-value findings; binary
+media was enumerated but not exhaustively scanned. No runtime/answer/contact file
+was staged. The remote commit and required docs were fetched and verified after
+push. This final status-only record follows the published submission commit.
+
+Submit the repository URL and docs/TECHNICAL_EXPLAINER.md through the organizer's
+actual form. No competition form was submitted by this agent. Phases7/8 remain
+skipped and no research, mail, UI or payment action was added in Phase9.
